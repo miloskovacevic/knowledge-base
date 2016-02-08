@@ -12,7 +12,6 @@ router.get('/', function(req, res, next) {
     });
 });
 
-
 router.get('/:id', function(req, res, next) {
     var id = req.params.id;
 
@@ -24,5 +23,7 @@ router.get('/:id', function(req, res, next) {
         res.json(category);
     });
 });
+
+
 
 module.exports = router;
