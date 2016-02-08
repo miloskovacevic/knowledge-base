@@ -10,7 +10,9 @@ var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
 
-mongoose.connect('mongodb://localhost/knowledgebase');
+mongoose.connect('mongodb://localhost/knowledgebase', function(){
+  console.log('Connected to MongoDB...');
+});
 
 var routes = require('./routes/index');
 var articles = require('./routes/articles');
