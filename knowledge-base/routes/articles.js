@@ -3,6 +3,7 @@ var router = express.Router();
 var Article = require('../models/article');
 
 
+
 router.get('/', function(req, res, next) {
   Article.getArticles(function (err, articles) {
       if(err){
@@ -12,7 +13,6 @@ router.get('/', function(req, res, next) {
       res.json(articles);
   });
 });
-
 
 router.get('/:id', function(req, res, next) {
     var id = req.params.id;
@@ -24,6 +24,7 @@ router.get('/:id', function(req, res, next) {
         res.json(article);
     });
 });
+
 
 router.get('/category/:category', function(req, res, next) {
     var category = req.params.category;
